@@ -185,6 +185,8 @@ const beautifulStranger = () => {
 
   // hint: You can get a list of elements by tag name, such as 'aside'
 
+  $('#middle-earth aside li').eq(3).text('Aragorn');
+
 };
 
 // COMMIT YOUR WORK
