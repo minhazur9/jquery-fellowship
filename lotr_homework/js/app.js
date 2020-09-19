@@ -51,7 +51,7 @@ const makeMiddleEarth = () => {
   const $MiddleEarth = $('<section id="middle-earth"/>');
 
   // 2. append the section to the body of the DOM.
-  
+
   $('body').append($MiddleEarth);
 
   // 3. use a for loop to iterate over the lands array that does the following:
@@ -64,11 +64,10 @@ const makeMiddleEarth = () => {
 
   //   3d. appends each land to the middle-earth section
 
-  for(let i = 0; i < lands.length; i++) {
-   const $article = $($MiddleEarth).append('<article/>');
-    $('article').eq(i).append(`<h1>${lands[i]}</h1>`);
+  for (let i = 0; i < lands.length; i++) {
+    $($MiddleEarth).append(`<article id='${lands[i]}'/>`);
+    $(`#${lands[i]}`).append(`<h1>${lands[i]}</h1>`);
   }
-
 };
 
 // COMMIT YOUR WORK
@@ -88,6 +87,11 @@ const makeHobbits = () => {
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
+
+  $('#The-Shire').append('<ul/>');
+  for(let i = 0; i < hobbits.length; i++) {
+    $('#The-Shire ul').append(`<li class = 'hobbit'>${hobbits[i]}</li>`);
+  }
 
 };
 
