@@ -169,6 +169,8 @@ const leaveTheShire = () => {
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
+  $('#The-Shire ul').detach().appendTo('#Rivendell');
+
 };
 
 // COMMIT YOUR WORK
