@@ -68,6 +68,7 @@ const makeMiddleEarth = () => {
     $($MiddleEarth).append(`<article id='${lands[i]}'/>`);
     $(`#${lands[i]}`).append(`<h1>${lands[i]}</h1>`);
   }
+
 };
 
 // COMMIT YOUR WORK
@@ -89,7 +90,7 @@ const makeHobbits = () => {
   // hint: get 'The-Shire' by using its id
 
   $('#The-Shire').append('<ul/>');
-  for(let i = 0; i < hobbits.length; i++) {
+  for (let i = 0; i < hobbits.length; i++) {
     $('#The-Shire ul').append(`<li class = 'hobbit'>${hobbits[i]}</li>`);
   }
 
@@ -110,6 +111,9 @@ const keepItSecretKeepItSafe = () => {
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
   // when you think you have given Frodo the ring, check in your Elements tab
+
+    $('#The-Shire li').eq(0).append('<div id="the-ring"></div>');
+  
 
 };
 
