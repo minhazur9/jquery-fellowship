@@ -48,11 +48,9 @@ const makeMiddleEarth = () => {
 
   // 1. create a section tag with an id of middle-earth
 
-  const $MiddleEarth = $('<section id="middle-earth"/>');
 
   // 2. append the section to the body of the DOM.
 
-  $('body').append($MiddleEarth);
 
   // 3. use a for loop to iterate over the lands array that does the following:
 
@@ -64,8 +62,9 @@ const makeMiddleEarth = () => {
 
   //   3d. appends each land to the middle-earth section
 
+  $('body').append('<section id="middle-earth"/>');
   for (let i = 0; i < lands.length; i++) {
-    $($MiddleEarth).append(`<article id='${lands[i]}'/>`);
+    $('#middle-earth').append(`<article id='${lands[i]}'/>`);
     $(`#${lands[i]}`).append(`<h1>${lands[i]}</h1>`);
   }
 
@@ -151,6 +150,11 @@ const makeBuddies = () => {
 
   // 3. give each of the buddies a class of "buddy"
 
+  $('#middle-earth').append('<aside/>');
+  $('#middle-earth aside').append('<ul/>')
+  for (let i = 0; i < buddies.length; i++) {
+    $('#middle-earth aside ul').append(`<li class="buddy">${buddies[i]}</li>`);
+  }
 };
 
 // COMMIT YOUR WORK
