@@ -205,6 +205,10 @@ const forgeTheFellowShip = () => {
 
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 
+  $('#middle-earth').append('<div id="the-fellowship"/>');
+  $('#Rivendell ul').detach().appendTo('#middle-earth #the-fellowship');
+  $('#middle-earth aside ul').detach().appendTo('#middle-earth #the-fellowship');
+
 };
 
 // COMMIT YOUR WORK
