@@ -246,7 +246,7 @@ const hornOfGondor = () => {
 
    $("#the-fellowship ul:nth-child(2) li").eq(4).css("text-decoration","line-through");
 
-   $("#middle-earth #Mordor ul li:nth-child(3)").remove();
+   $("#middle-earth #Mordor ul li").eq(2).remove();
 
 };
 
@@ -301,6 +301,12 @@ const thereAndBackAgain = () => {
   // 2. remove all the baddies from the DOM
 
   // 3. Move all the hobbits back to the shire
+
+  $('#gollum').remove();
+  $('#Mordor ul').remove();
+  $('#Mordor li').detach().prependTo('#the-fellowship ul:nth-child(1)');
+  $('#the-fellowship ul').eq(0).detach().appendTo('#The-Shire');
+  
 
 };
 
