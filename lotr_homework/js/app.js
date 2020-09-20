@@ -262,6 +262,10 @@ const itsDangerousToGoAlone = () => {
 
   // 2. add a div with an id of 'mount-doom' to Mordor
 
+  $("#the-fellowship ul li").eq(0).detach().appendTo('#Mordor');
+  $("#the-fellowship ul li").eq(0).detach().appendTo('#Mordor');
+  $('#Mordor').append('<div id="mount-doom"/>');
+
 };
 
 // COMMIT YOUR WORK
