@@ -242,6 +242,12 @@ const hornOfGondor = () => {
 
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
 
+   alert("The Horn of Gondor has been blown!");
+
+   $("#the-fellowship ul:nth-child(2) li").eq(4).css("text-decoration","line-through");
+
+   $("#middle-earth #Mordor ul li:nth-child(3)").remove();
+
 };
 
 // COMMIT YOUR WORK
